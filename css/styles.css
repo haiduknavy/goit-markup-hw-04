@@ -72,6 +72,10 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
+.link {
+  text-decoration: none;
+  color: inherit;
+}
 /* Стилизация header */
 .header {
   border-bottom: 1px solid #ececec;
@@ -128,6 +132,7 @@ body {
 }
 .link-contact {
   display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   text-decoration: none;
@@ -154,6 +159,7 @@ body {
   background-color: var(--back-bg);
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -196,37 +202,25 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.our-principles-list {
+  display: flex;
+}
 .our-principles .container {
   display: flex;
 }
+.our-principles-list .wrap {
+  display: flex;
+  padding: 0;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--section-color-light);
+  border-radius: 4px;
+}
 .our-principles .item:not(:last-child) {
   margin-right: 30px;
-}
-.our-principles .item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--section-color-light);
-  border-radius: var(--button-border-radius);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
-}
-
-.our-principles-list {
-  display: flex;
 }
 .our-principles-title {
   font-weight: bold;
@@ -282,11 +276,11 @@ body {
 }
 .our-team-card-text {
   font-size: 16px;
+  margin-bottom: 16px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--font-color-dark);
-  margin-bottom: 0;
 }
 .our-team .wrap {
   text-align: center;
@@ -304,7 +298,6 @@ body {
   height: 40px;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
   margin-right: 10px;
   color: var(--icon-color);
 }
@@ -347,34 +340,6 @@ body {
   margin-right: 30px;
 }
 .clients-icon {
-  width: 45px;
-  height: 50px;
-  fill: currentColor;
-}
-
-.clients-icon-2 {
-  width: 40px;
-  height: 52px;
-  fill: currentColor;
-}
-.clients-icon-3 {
-  width: 41px;
-  height: 42.6px;
-  fill: currentColor;
-}
-.clients-icon-4 {
-  width: 79.66px;
-  height: 42.02px;
-  fill: currentColor;
-}
-.clients-icon-5 {
-  width: 59px;
-  height: 47px;
-  fill: currentColor;
-}
-.clients-icon-6 {
-  width: 88.48px;
-  height: 45.44px;
   fill: currentColor;
 }
 .clients-link:hover,
@@ -412,12 +377,6 @@ body {
 .portfolio-card {
   width: 370px;
 }
-.portfolio-card:hover,
-.portfolio-card:focus {
-  cursor: pointer;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 .content-portfolio .wrap {
   text-align: left;
   padding: 20px 24px;
@@ -439,6 +398,12 @@ body {
   color: var(--font-color-dark);
   font-weight: normal;
   margin-bottom: 0;
+}
+.portfolio-card:hover,
+.portfolio-card:focus {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /* Стилизация footer */
 .footer {
@@ -477,6 +442,7 @@ body {
   background-color: var(--hover-focus-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: none !important;
 }
 .link-nav:hover,
 .link-nav:focus,
@@ -486,10 +452,10 @@ body {
 }
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-social-link-wrap {
   margin-left: 70px;
-  padding-top: 12px;
 }
 .footer-social-link-title {
   text-transform: uppercase;
@@ -511,8 +477,10 @@ body {
   height: 44px;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   color: var(--main-color);
+}
+.footer-social-link-list .item:not(:last-child) {
+  margin-right: 10px;
 }
 .footer-social-icon {
   width: 20px;
