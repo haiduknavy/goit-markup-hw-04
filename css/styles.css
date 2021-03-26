@@ -156,6 +156,8 @@ body {
   fill: currentColor;
 }
 .hero {
+  margin-right: auto;
+  margin-left: auto;
   background-color: var(--back-bg);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -291,6 +293,9 @@ body {
   margin: 0;
   list-style: none;
 }
+.social-link-list .item:not(:last-child) {
+  margin-right: 10px;
+}
 .social-link {
   display: flex;
   border-radius: 50%;
@@ -298,7 +303,6 @@ body {
   height: 40px;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   color: var(--icon-color);
 }
 .social-icon {
@@ -405,6 +409,7 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 /* Стилизация footer */
 .footer {
   background-color: var(--section-color-dark);
